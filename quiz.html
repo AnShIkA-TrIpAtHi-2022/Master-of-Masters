@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style_quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="question-container">
+            <div id="question">Question will go here</div>
+            <div id="options">
+                <button class="option" onclick="checkAnswer(0)">Option 1</button>
+                <button class="option" onclick="checkAnswer(1)">Option 2</button>
+                <button class="option" onclick="checkAnswer(2)">Option 3</button>
+                <button class="option" onclick="checkAnswer(3)">Option 4</button>
+            </div>
+        </div>
+        <div id="timer"><i class="fa fa-clock-o" style="font-size:24px"></i>00:00</div>
+        <div id="navigation">
+            <button onclick="previousQuestion()">Previous</button>
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+    </div>
+
+    <!-- Score Pop-Up -->
+    <div id="score-popup" style="display: none;">
+        <div id="popup-content">
+            <h3>Quiz Completed!</h3>
+            <p>Your Score: <span id="score"></span></p>
+            <p><span id="completion-time">⏱ </span></p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>    
+
+
+    <script src="script_quiz.js"></script>
+</body>
+</html>

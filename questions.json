@@ -1,0 +1,379 @@
+[
+      {
+        "question": "What is the binary equivalent of the decimal number 10?",
+        "options": ["a) 1010", "b) 1100", "c) 1001", "d) 1110"],
+        "answer": "a) 1010",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What is 2^3 × 2^2?",
+        "options": ["a) 8", "b) 16", "c) 32", "d) 64"],
+        "answer": "c) 32",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What is the default port number for HTTP?",
+        "options": ["a) 25", "b) 80", "c) 443", "d) 21"],
+        "answer": "b) 80",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What does DNS stand for?",
+        "options": ["a) Domain Numbering System", "b) Data Name Service", "c) Domain Name System", "d) Data Number Service"],
+        "answer": "c) Domain Name System",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Which data structure works on the principle of LIFO?",
+        "options": ["a) Queue", "b) Array", "c) Stack", "d) Linked List"],
+        "answer": "c) Stack",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What is the output of 5 + 3 × 2?",
+        "options": ["a) 11", "b) 13", "c) 16", "d) 10"],
+        "answer": "b) 13",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What is the time complexity of binary search?",
+        "options": ["a) O(n)", "b) O(n²)", "c) O(log n)", "d) O(1)"],
+        "answer": "c) O(log n)",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What is the decimal equivalent of the hexadecimal number A?",
+        "options": ["a) 10", "b) 15", "c) 16", "d) 12"],
+        "answer": "a) 10",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What does ACID in databases stand for?",
+        "options": [
+          "a) Atomicity, Consistency, Integration, Durability",
+          "b) Atomicity, Consistency, Isolation, Durability",
+          "c) Automatic, Consistency, Isolation, Durability",
+          "d) Atomicity, Control, Isolation, Durability"
+        ],
+        "answer": "b) Atomicity, Consistency, Isolation, Durability",
+        "difficulty": "easy"
+      },
+      {
+        "question": "In the OSI model, which layer is responsible for routing?",
+        "options": ["a) Physical", "b) Network", "c) Transport", "d) Application"],
+        "answer": "b) Network",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Which of these is a valid binary number?",
+        "options": ["a) 1020", "b) 10101", "c) 1012", "d) 11120"],
+        "answer": "b) 10101",
+        "difficulty": "easy"
+      },
+      {
+        "question": "How many bits are there in 1 byte?",
+        "options": ["a) 4", "b) 8", "c) 16", "d) 32"],
+        "answer": "b) 8",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What is the decimal equivalent of the binary number 111?",
+        "options": ["a) 6", "b) 7", "c) 8", "d) 5"],
+        "answer": "b) 7",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Which of the following is a regular language?",
+        "options": [
+          "a) {a^n b^n | n ≥ 0}",
+          "b) {a^n b^m | n, m ≥ 0}",
+          "c) {a^n b^n c^n | n ≥ 0}",
+          "d) {a^p | p is prime}"
+        ],
+        "answer": "b) {a^n b^m | n, m ≥ 0}",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What is the size of an IPv4 address?",
+        "options": ["a) 32 bits", "b) 64 bits", "c) 128 bits", "d) 16 bits"],
+        "answer": "a) 32 bits",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What is the result of 3^2 − 2^3?",
+        "options": ["a) 1", "b) 2", "c) 5", "d) 7"],
+        "answer": "a) 1",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Which of the following is not a preemptive scheduling algorithm?",
+        "options": ["a) FCFS", "b) Round Robin", "c) Shortest Remaining Time First", "d) Priority Scheduling"],
+        "answer": "a) FCFS",
+        "difficulty": "easy"
+      },
+      {
+        "question": "In a tree graph, the number of edges is:",
+        "options": ["a) n", "b) n+1", "c) n−1", "d) 2n"],
+        "answer": "c) n−1",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Which SQL command is used to remove a row from a table?",
+        "options": ["a) DELETE", "b) DROP", "c) TRUNCATE", "d) REMOVE"],
+        "answer": "a) DELETE",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Which data structure uses FIFO (First In, First Out)?",
+        "options": ["a) Stack", "b) Queue", "c) Linked List", "d) Binary Tree"],
+        "answer": "b) Queue",
+        "difficulty": "easy"
+      },
+      {
+        "question": "What is the time complexity of accessing an element in a balanced binary search tree (BST)?",
+        "options": ["a) O(1)", "b) O(log n)", "c) O(n)", "d) O(n log n)"],
+        "answer": "b) O(log n)",
+        "difficulty": "medium"
+      },
+      {
+        "question": "In a binary tree, how many leaves will a full binary tree with 5 levels have?",
+        "options": ["a) 16", "b) 32", "c) 64", "d) 128"],
+        "answer": "b) 32",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Which of the following is not a characteristic of a deadlock in an operating system?",
+        "options": ["a) Mutual exclusion", "b) Hold and wait", "c) Preemption", "d) Circular wait"],
+        "answer": "c) Preemption",
+        "difficulty": "medium"
+      },
+      {
+        "question": "In a fully connected network with n nodes, how many links are required?",
+        "options": ["a) n(n−1)", "b) n(n−1)/2", "c) n²", "d) n(n+1)/2"],
+        "answer": "b) n(n−1)/2",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Which of the following is not a valid operation in SQL?",
+        "options": ["a) SELECT", "b) INSERT", "c) UPDATE", "d) DELETE"],
+        "answer": "d) DELETE",
+        "difficulty": "medium"
+      },
+      {
+        "question": "The probability of a process being in the ready state in a time-sharing system is:",
+        "options": ["a) 0", "b) 1", "c) Less than 1", "d) Equal to the probability of the process being in the running state"],
+        "answer": "c) Less than 1",
+        "difficulty": "medium"
+      },
+      {
+        "question": "What is the time complexity of the QuickSort algorithm in the best case?",
+        "options": ["a) O(n log n)", "b) O(n)", "c) O(n²)", "d) O(log n)"],
+        "answer": "a) O(n log n)",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Which of the following expressions is a regular expression for a string of 0s and 1s that contains an even number of 1s?",
+        "options": ["a) (0*10*10*)*", "b) (0*10*1)*", "c) 0*1*0*", "d) (0*10*1)*"],
+        "answer": "a) (0*10*10*)*",
+        "difficulty": "medium"
+      },
+      {
+        "question": "In a multilevel queue scheduling system, processes are assigned to different queues based on:",
+        "options": ["a) Their burst time", "b) Their priority", "c) Their arrival time", "d) Their CPU utilization"],
+        "answer": "b) Their priority",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Which of the following is an example of a non-primitive data structure?",
+        "options": ["a) Array", "b) Stack", "c) Queue", "d) Graph"],
+        "answer": "d) Graph",
+        "difficulty": "medium"
+      },
+      {
+        "question": "What is the worst-case time complexity of the merge sort algorithm?",
+        "options": ["a) O(n)", "b) O(n log n)", "c) O(n²)", "d) O(log n)"],
+        "answer": "b) O(n log n)",
+        "difficulty": "medium"
+      },
+      {
+        "question": "In a hash table, what is the time complexity of searching for an element in the best case?",
+        "options": ["a) O(n)", "b) O(log n)", "c) O(1)", "d) O(n log n)"],
+        "answer": "c) O(1)",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Which data structure is used for implementing recursion?",
+        "options": ["a) Stack", "b) Queue", "c) Array", "d) Linked List"],
+        "answer": "a) Stack",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Which of the following is a type of non-relational database?",
+        "options": ["a) MySQL", "b) PostgreSQL", "c) MongoDB", "d) Oracle"],
+        "answer": "c) MongoDB",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Which of the following is a disadvantage of the First-Come-First-Serve (FCFS) scheduling algorithm?",
+        "options": [
+          "a) Unfair to processes with large burst times",
+          "b) Can lead to starvation",
+          "c) Short jobs are given higher priority",
+          "d) It requires priority assignments"
+        ],
+        "answer": "a) Unfair to processes with large burst times",
+        "difficulty": "medium"
+      },
+      {
+        "question": "What is the time complexity of bubble sort in the worst case?",
+        "options": ["a) O(n)", "b) O(log n)", "c) O(n²)", "d) O(n log n)"],
+        "answer": "c) O(n²)",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Which of the following is a valid regular expression to match any string that ends with ab?",
+        "options": ["a) .*ab", "b) ab.*", "c) ab*", "d) .*a.*b"],
+        "answer": "a) .*ab",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Which protocol is used to assign dynamic IP addresses to computers on a network?",
+        "options": ["a) TCP", "b) FTP", "c) DHCP", "d) DNS"],
+        "answer": "c) DHCP",
+        "difficulty": "medium"
+      },
+      {
+        "question": "What is the worst-case space complexity of the recursive implementation of quicksort?",
+        "options": ["a) O(log n)", "b) O(n)", "c) O(n²)", "d) O(n log n)"],
+        "answer": "a) O(log n)",
+        "difficulty": "medium"
+      },
+      {
+        "question": "In a directed graph, how many edges are required to make it strongly connected if there are n vertices?",
+        "options": ["a) n−1", "b) n", "c) n+1", "d) 2n"],
+        "answer": "a) n−1",
+        "difficulty": "medium"
+      },
+      {
+        "question": "What is the time complexity of performing a merge operation on two sorted arrays of size n and m?",
+        "options": ["O(n)", "O(m)", "O(n + m)", "O(n log n)"],
+        "answer": "O(n + m)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "In a hash table with separate chaining, the time complexity for insertion, deletion, and search in the worst case is:",
+        "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+        "answer": "O(n)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which of the following algorithms can solve the problem of finding the shortest path in a graph with negative edge weights but no negative weight cycles?",
+        "options": ["Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Floyd-Warshall Algorithm", "A* Algorithm"],
+        "answer": "Bellman-Ford Algorithm",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "In a directed acyclic graph (DAG), the minimum number of edges needed to ensure that every node has a path to the root is:",
+        "options": ["n-1", "n", "n+1", "n(n-1)"],
+        "answer": "n-1",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "In an AVL tree, what is the worst-case time complexity for insertion and deletion operations?",
+        "options": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+        "answer": "O(log n)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the time complexity of the dynamic programming approach for solving the 0/1 Knapsack problem?",
+        "options": ["O(n log n)", "O(nW)", "O(n²)", "O(2^n)"],
+        "answer": "O(nW)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "In a system that uses demand paging, the page fault rate is 0.1. What is the effective memory access time (EMAT) if the time to access a page is 100 ns and the page fault service time is 800 ns?",
+        "options": ["120 ns", "180 ns", "200 ns", "1000 ns"],
+        "answer": "180 ns",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which of the following is the correct time complexity for the Floyd-Warshall algorithm for all pairs shortest path problem?",
+        "options": ["O(n²)", "O(n log n)", "O(n³)", "O(n!)"],
+        "answer": "O(n³)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which of the following best describes the space complexity of a recursive function that has an auxiliary stack?",
+        "options": ["O(log n)", "O(n)", "O(n²)", "O(1)"],
+        "answer": "O(n)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the worst-case time complexity of the Heap Sort algorithm?",
+        "options": ["O(n log n)", "O(n²)", "O(log n)", "O(n)"],
+        "answer": "O(n log n)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "In a binary tree with n nodes, the maximum possible number of internal nodes is:",
+        "options": ["n", "n-1", "n/2", "n/2 - 1"],
+        "answer": "n/2",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which of the following is true about the time complexity of the Fibonacci sequence using dynamic programming?",
+        "options": ["O(n)", "O(log n)", "O(n²)", "O(2^n)"],
+        "answer": "O(n)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the worst-case time complexity of Dijkstra's algorithm using a binary heap?",
+        "options": ["O(n log n)", "O(m log n)", "O(n²)", "O(n log m)"],
+        "answer": "O(m log n)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which of the following problems cannot be solved using a greedy algorithm?",
+        "options": ["Fractional Knapsack", "Job Scheduling", "0/1 Knapsack", "Huffman Coding"],
+        "answer": "0/1 Knapsack",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the worst-case time complexity of the merge sort algorithm?",
+        "options": ["O(n log n)", "O(n²)", "O(log n)", "O(n)"],
+        "answer": "O(n log n)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the space complexity of the recursive version of the quicksort algorithm?",
+        "options": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+        "answer": "O(log n)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which of the following is true for the time complexity of the Ford-Fulkerson method for computing the maximum flow in a flow network?",
+        "options": ["O(n)", "O(mn)", "O(m²)", "O(n²)"],
+        "answer": "O(mn)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the worst-case time complexity of the Bellman-Ford algorithm for finding the shortest paths from a source vertex to all other vertices in a graph?",
+        "options": ["O(n log n)", "O(n²)", "O(mn)", "O(m + n)"],
+        "answer": "O(mn)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the space complexity of storing a graph using an adjacency matrix?",
+        "options": ["O(n)", "O(n²)", "O(m)", "O(n log n)"],
+        "answer": "O(n²)",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the time complexity of the Knuth-Morris-Pratt (KMP) algorithm for pattern matching?",
+        "options": ["O(n)", "O(m)", "O(n + m)", "O(n²)"],
+        "answer": "O(n + m)",
+        "difficulty": "Hard"
+      }
+]
+  
+  

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#">Eduverse</a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="#">Home</a></li>
+                <li><a href="#tests">Test Series</a></li>
+                <li>
+                    <a href="#" class="desktop-item">Mega Menu</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Mega Menu</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="cover.png" alt="">
+                            </div>
+                            <div class="row">
+                                <header>Undergraduate Exams</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">JEE Main</a></li>
+                                    <li><a href="#">BITSAT</a></li>
+                                    <li><a href="#">NEET UG</a></li>
+                                    <li><a href="#">CLAT</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Postgratuate Exams</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">GATE</a></li>
+                                    <li><a href="#">PGCET</a></li>
+                                    <li><a href="#">NEET PG</a></li>
+                                    <li><a href="#">CLAT PG</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>More PG Exams</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">CAT</a></li>
+                                    <li><a href="#">MAT</a></li>
+                                    <li><a href="#">CUET</a></li>
+                                    <li><a href="#">UGC NET</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#pyq">PYQ</a></li>
+                <li><a href="dashboard.html"><button class="user"><i class="fa fa-user"></i></button></a></li>
+                <li><a href="#"><button class="logout" id="logout">Log Out</button></a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <img src="background1.png" class="picMain" alt="Snow" style="width:100%;">
+            <div class="top-left">
+                <p class="textGATE">GATE</p>
+                <p class="gateCaption">Postgrad, PSU, Engineering exam</p>
+                <br><br>
+                <button onclick="startDailyChallenge()" class="daily">Daily Challenge <i class="fa fa-angle-double-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <section id="pyq">
+        <div class="PYQ">
+            <div class="text_PYQ">
+                <p>Previous Year Papers</p>
+            </div>
+            <div class="download">
+                <button class="daily1">Download PDF  <i class="fa fa-angle-double-right"></i></button>
+                <br><br><br>
+                <button onClick="startTest('random')" class="daily1">Attempt Test  <i class="fa fa-angle-double-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <section id="tests">
+        <div class="whatlevel">
+            <h2 class="lev_head">What's your level...??</h2>
+    
+            </div>
+           
+    
+            <div class="levels">
+                <a onClick="startTest('easy')" href="#" class="level-card">
+                    <div class="card1">
+                        <img src="levels.jpg" alt="Easy Level" class="card-image">
+                        <h4><b>Easy</b></h4>
+                    </div>
+                </a>
+    
+                <a onClick="startTest('medium')" href="#" class="level-card">
+                    <div class="card1">
+                        <img src="levels.jpg" alt="Medium Level" class="card-image">
+                        <h4><b>Medium</b></h4>
+                    </div>
+                </a>
+    
+                <a onClick="startTest('hard')" href="#" class="level-card">
+                    <div class="card1">
+                        <img src="levels.jpg" alt="Hard Level" class="card-image">
+                        <h4><b>Hard</b></h4>
+                    </div>
+                </a>
+                <a onClick="startTest('random')" href="#" class="level-card">
+                    <div class="card1">
+                        <img src="levels.jpg" alt="Hard Level" class="card-image"> 
+                        <h4><b>Random</b></h4>
+                    </div>
+                </a>
+            </div>
+    </section>
+
+    <section class="sec3">
+        <div class="whatlevel">
+            <h2 class="lev_head">Attempt Your Test</h2>
+        </div>
+    
+            <div class="card-container">
+                <div class="card">
+                    <div class="badge">60019 Registrations</div>
+                    <div class="card-header">
+                        <img src="mathpic.avif" alt="SDE Icon">
+                        <h2>Maths</h2>
+                    </div>
+                    <div class="card-details">
+                        <p><span>⏱ Time:</span> 50 Minutes</p>
+                        <p><span>📋 Objective:</span> 5</p>
+                        <p><span>💻 Programming:</span> 2</p>
+                    </div>
+                    <div class="card-footer">
+                        <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
+                    </div>
+                </div>
+    
+    
+                
+    
+    
+                <div class="card">
+                    <div class="badge">60019 Registrations</div>
+                    <div class="card-header">
+                        <img src="sql.jpg" alt="SDE Icon">
+                        <h2>SQL</h2>
+                    </div>
+                    <div class="card-details">
+                        <p><span>⏱ Time:</span> 50 Minutes</p>
+                        <p><span>📋 Objective:</span> 5</p>
+                        <p><span>💻 Programming:</span> 2</p>
+                    </div>
+                    <div class="card-footer">
+                        <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
+                    </div>
+                </div>
+    
+              
+    
+                <div class="card">
+                    <div class="badge">60019 Registrations</div>
+                    <div class="card-header">
+                        <img src="digitalLogic.jpg" alt="SDE Icon">
+                        <h2>Digital Logic</h2>
+                    </div>
+                    <div class="card-details">
+                        <p><span>⏱ Time:</span> 50 Minutes</p>
+                        <p><span>📋 Objective:</span> 5</p>
+                        <p><span>💻 Programming:</span> 2</p>
+                    </div>
+                    <div class="card-footer">
+                        <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
+                    </div>
+                </div>
+    
+    
+    
+    
+                <div class="card">
+                    <div class="badge">60019 Registrations</div>
+                    <div class="card-header">
+                        <img src="CN.jpg" alt="SDE Icon">
+                        <h2>Computer Network</h2>
+                    </div>
+                    <div class="card-details">
+                        <p><span>⏱ Time:</span> 50 Minutes</p>
+                        <p><span>📋 Objective:</span> 5</p>
+                        <p><span>💻 Programming:</span> 2</p>
+                    </div>
+                    <div class="card-footer">
+                        <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
+                    </div>
+                </div>
+    
+    
+    
+                <div class="card">
+                    <div class="badge">60019 Registrations</div>
+                    <div class="card-header">
+                        <img src="OperatingSystem.jpg" alt="SDE Icon">
+                        <h2>Operating System</h2>
+                    </div>
+                    <div class="card-details">
+                        <p><span>⏱ Time:</span> 50 Minutes</p>
+                        <p><span>📋 Objective:</span> 5</p>
+                        <p><span>💻 Programming:</span> 2</p>
+                    </div>
+                    <div class="card-footer">
+                        <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="badge">60019 Registrations</div>
+                    <div class="card-header">
+                        <img src="SoftwareEngineering.webp" alt="SDE Icon">
+                        <h2>Software Engineer</h2>
+                    </div>
+                    <div class="card-details">
+                        <p><span>⏱ Time:</span> 50 Minutes</p>
+                        <p><span>📋 Objective:</span> 5</p>
+                        <p><span>💻 Programming:</span> 2</p>
+                    </div>
+                    <div class="card-footer">
+                        <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
+                    </div>
+                </div>
+    
+    
+    
+    
+                <div class="card">
+                    <div class="badge">60019 Registrations</div>
+                    <div class="card-header">
+                        <img src="DSA.jpg" alt="SDE Icon">
+                        <h2>DSA</h2>
+                    </div>
+                    <div class="card-details">
+                        <p><span>⏱ Time:</span> 50 Minutes</p>
+                        <p><span>📋 Objective:</span> 5</p>
+                        <p><span>💻 Programming:</span> 2</p>
+                    </div>
+                    <div class="card-footer">
+                        <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
+                    </div>
+                </div>
+    
+    
+    
+    
+                <div class="card">
+                    <div class="badge">60019 Registrations</div>
+                    <div class="card-header">
+                        <img src="compileDesign.jpg" alt="SDE Icon">
+                        <h2>Compile Design</h2>
+                    </div>
+                    <div class="card-details">
+                        <p><span>⏱ Time:</span> 50 Minutes</p>
+                        <p><span>📋 Objective:</span> 5</p>
+                        <p><span>💻 Programming:</span> 2</p>
+                    </div>
+                    <div class="card-footer">
+                        <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
+                    </div>
+                </div>
+            
+               
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Top Section -->
+            <div class="footer-sections">
+                <!-- About Us Section -->
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>
+                        EduVerse is your one-stop solution for competitive exam preparation.
+                        We provide high-quality content, mock tests, and personalized analytics.
+                    </p>
+                </div>
+    
+                <!-- Quick Links Section -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Mock Tests</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Help Section -->
+                <div class="footer-section">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Follow Us Section -->
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><img src="icon-facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="icon-twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="icon-instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="icon-linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script_home.js"></script>
+</body>
+</html>

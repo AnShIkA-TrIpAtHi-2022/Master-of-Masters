@@ -1,0 +1,534 @@
+.logo {
+    font-size: 30px;
+    color: rgb(255, 116, 178);
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: rgb(255, 116, 178);
+    background: none;
+}
+
+.navbar-header {
+    margin-top: 10px;
+}
+
+.container-fluid {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background-color: rgb(14, 52, 6);
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar_navbar-inverse {
+    background-color: rgb(33, 5, 53);
+    /* display: flex; */
+    /* justify-content: space-between; */
+    padding: 0;
+    margin: 0;
+}
+
+.active a {
+    color: rgb(255, 213, 224);
+    font-size: 20px;
+}
+
+.active a:hover {
+    background-color: white;
+    color: rgb(9, 59, 36);
+    border-radius: 999px;
+}
+
+.form-control {
+    font-size: 18px;
+    border-radius: 1000px;
+}
+
+.container-fluid button {
+    color: white;
+    background-color: rgb(14, 52, 6);
+}
+
+.container-fluid button:hover {
+    background-color: white;
+    color: rgb(14, 52, 6);
+}
+
+.navbar-header a i {
+    color: white;
+}
+
+
+/* ------------------------------------------------------------------- */
+
+
+/* Container holding the image and the text */
+.container {
+    margin-top: 69px;
+    position: relative;
+    text-align: center;
+    color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.picMain {
+    width: 100%;
+    transform: translateY(-200px);
+}
+
+.gateCaption {
+    font-size: 20px;
+}
+
+.textGATE {
+    height: 140px;
+    font-size: 120px;
+}
+
+.daily {
+    background-color: rgb(9, 59, 36);
+    height: 40px;
+    width: 180px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 999px;
+    border: none;
+}
+
+.daily:hover {
+    color: rgb(9, 59, 36);
+    background-color: white;
+}
+
+/* PYQ's */
+.pdf {
+    height: 100px;
+    width: 300px;
+    font-size: 30px;
+    border-radius: 999px;
+}
+
+.PYQ {
+    position: relative;
+    text-align: center;
+    color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+}
+
+.PYQ_bg {
+    width: 100%;
+}
+
+.text_PYQ {
+    position: absolute;
+    top: 220px;
+    left: 60px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text_PYQ p {
+    font-size: 60px;
+    text-shadow: 4px -4px 4px rgba(0, 0, 0, 0.67);
+}
+
+.download {
+    position: absolute;
+    top: 120px;
+    right: 160px;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.pdf:hover {
+    color: white;
+    background-color: rgb(9, 59, 36);
+    border: none;
+}
+
+
+/*------------------------ levels ------------------- */
+
+/* General Layout */
+/* General Layout */
+.levels {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.level-card {
+    text-decoration: none; /* Prevents underline on links */
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures image and content fit neatly */
+    width: 300px; /* Fixed width for consistency */
+    flex-grow: 0; /* Prevents cards from stretching or shrinking */
+    text-align: center;
+    background: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Smooth zoom effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Ensures consistent image display */
+    border-bottom: 2px solid #ddd;
+}
+
+.card h4 {
+    margin: 16px 0;
+    color: #333;
+    font-size: 2rem;
+}
+
+.lev_head {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 10px;
+
+}
+
+h4 b{
+    text-decoration: none;
+}
+.whatlevel{
+    background-color: rgb(141, 23, 113);
+    color: white;
+    height: 60px;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+/* subjects cards */
+
+.subjects {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    align-items: center; /* Center cards vertically */
+    padding: 20px;
+    gap: 20px; /* Spacing between cards */
+}
+
+.subject-card {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color */
+}
+
+.scard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.scard:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.scard-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+}
+
+.sbtn {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sbtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight pop-out effect */
+}
+
+.sbtn:active {
+    background-color: #004085;
+    transform: translateY(0); /* Reset on click */
+}
+
+@media (max-width: 600px) {
+    .scard {
+        width: 150px;
+        height: 250px;
+    }
+
+    .sbtn {
+        font-size: 12px;
+    }
+}
+
+/* /////////////////////// */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7fafc;
+    margin: 0;
+    padding: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.custom-card {
+    width: 220px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Badge Styling */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffe5e5;
+    color: #e63946;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* Card Header */
+.card-header img {
+    width: 130px;
+    margin-top: 20px;
+}
+
+.card-header h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Card Details */
+.card-details {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.card-details p {
+    margin: 5px 0;
+}
+
+.card-details span {
+    font-weight: bold;
+}
+
+/* Card Footer */
+.card-footer {
+    margin-bottom: 20px;
+}
+
+.card-footer .button {
+    text-decoration: none;
+    background: rgb(65, 15, 65);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.card-footer .button:hover {
+    background: #0056b3;
+}
+
+/* Differentiation by Class */
+.sde-card {
+    border: 2px solid #007bff;
+}
+
+.sql-card {
+    border: 2px solid #e63946;
+}
+
+.ds-card {
+    border: 2px solid #ffa500;
+}
+
+.python-card {
+    border: 2px solid #28a745;
+}
+
+.dsml-card {
+    border: 2px solid #6f42c1;
+}
+
+.card{
+    background-color: rgb(230, 167, 178);
+    color: rgb(69, 19, 56);
+}
+
+
+
+/* footerrrrrr*/
+
+
+
+/* Footer Container */
+.footer {
+    background-color: rgb(35, 1, 35);
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Sections Layout */
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+/* Individual Footer Section */
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: rgb(167, 17, 112);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: rgb(162, 40, 121);
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+
+

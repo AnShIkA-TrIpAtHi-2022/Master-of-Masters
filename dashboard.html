@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVerse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body::-webkit-scrollbar,#scroll-table::-webkit-scrollbar{
+            display: none;
+        }
+        #progressChart{
+            width:600px;
+            height: 100%;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+nav{
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  transform: translateY(-80px);
+  background: rgb(33, 5, 53);
+  padding:5px;
+}
+nav .wrapper{
+  position: relative;
+  max-width: 1300px;
+  padding: 0px 30px;
+  height: 70px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .logo a{
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper .nav-links{
+  display: inline-flex;
+  align-items: center;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+  background: rgb(123, 51, 125);
+}
+.nav-links .mobile-item{
+  display: none;
+}
+.nav-links .drop-menu{
+  position: absolute;
+  background: rgb(33, 5, 53);
+  width: 180px;
+  line-height: 45px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a{
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.mega-box{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content{
+  background: #242526;
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.mega-box .content .row{
+  width: calc(25% - 30px);
+  line-height: 45px;
+}
+.content .row img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content .row header{
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .row .mega-links{
+  margin-left: -40px;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+}
+.row .mega-links li a{
+  padding: 0px;
+  padding: 0 20px;
+  color: #d9d9d9;
+  font-size: 17px;
+  display: block;
+}
+.row .mega-links li a:hover{
+  color: #f2f2f2;
+}
+.wrapper .btn{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.close-btn{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+@media screen and (max-width: 970px) {
+  .wrapper .btn{
+    display: block;
+  }
+  .wrapper .nav-links{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: #242526;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+  }
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3A3B3C;
+  }
+  #menu-btn:checked ~ .nav-links{
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn{
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn{
+    display: block;
+  }
+  .nav-links li{
+    margin: 15px 10px;
+  }
+  .nav-links li a{
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .nav-links .drop-menu{
+    position: static;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu,
+  #showMega:checked ~ .mega-box{
+    max-height: 100%;
+  }
+  .nav-links .desktop-item{
+    display: none;
+  }
+  .nav-links .mobile-item{
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-item:hover{
+    background: #3A3B3C;
+  }
+  .drop-menu li{
+    margin: 0;
+  }
+  .drop-menu li a{
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .mega-box{
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content{
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row{
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2){
+    border-top: 0px;
+  }
+  .content .row .mega-links{
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .row .mega-links li{
+    margin: 0;
+  }
+  .content .row header{
+    font-size: 19px;
+  }
+}
+nav input{
+  display: none;
+}
+
+
+.user{
+    border: 0;
+    background-color: #24252600;
+    color: white;
+    font-size: 22px;
+}
+.logout{
+    width: 100%;
+    border: 0;
+    padding: 9px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body class="h-screen">
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#">Eduverse</a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dashboard.html"><button class="user"><i class="fa fa-user"></i></button></a></li>
+                <li><a href="#"><button class="logout" id="logout">Log Out</button></a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-gray-600 w-40 h-screen -mt-2 fixed">
+        <p class="text-white font-bold text-center m-10 :hover">GATE</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="ml-44 mt-20">
+        <div class="flex gap-12">
+            <!-- Progress Chart Section -->
+            <div class="w-2/5 h-72">
+                <p class="text-center font-bold mb-2 text-2xl">Progress Chart</p>
+                <canvas class="h-full w-full rounded-lg"></canvas>
+            </div>
+
+            <!-- Top Subjects Section -->
+            <div id="top5subjects" class="w-1/2 ">
+                <p class="font-bold text-2xl text-center mt-2">Top Subjects</p>
+                <div class="overflow-x-auto mt-4">
+                    <table class="table-auto w-full border-collapse border border-gray-300 bg-white rounded-lg shadow-lg mt-4">
+                        <thead class="bg-gray-700 text-white">
+                            <tr>
+                                <th class="border border-gray-300 px-4 py-2">S.No.</th>
+                                <th class="border border-gray-300 px-4 py-2">Subject</th>
+                                <th class="border border-gray-300 px-4 py-2">Accuracy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-100">
+                                <td class="border border-gray-300 px-4 py-2 text-center">1</td>
+                                <td class="border border-gray-300 px-4 py-2">Mathematics</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">95%</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="border border-gray-300 px-4 py-2 text-center">2</td>
+                                <td class="border border-gray-300 px-4 py-2">Physics</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">89%</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="border border-gray-300 px-4 py-2 text-center">3</td>
+                                <td class="border border-gray-300 px-4 py-2">Chemistry</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">88%</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="border border-gray-300 px-4 py-2 text-center">4</td>
+                                <td class="border border-gray-300 px-4 py-2">Biology</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">84%</td>
+                            </tr>
+                            <tr class="hover:bg-gray-100">
+                                <td class="border border-gray-300 px-4 py-2 text-center">5</td>
+                                <td class="border border-gray-300 px-4 py-2">English</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">81%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 flex gap-8 ">
+            <!-- Scrollable Table Section -->
+            <div class=" w-1/2 h-96 rounded-md p-4 overflow-y-scroll shadow-xl" id="scroll-table">
+                <p class="font-bold text-center text-xl mb-4">All Subjects Scores</p>
+                <table class="table-auto w-full border-collapse border border-gray-300 bg-white rounded-lg shadow-lg">
+                    <thead class="bg-gray-700 text-white z-10" id="scroll-table">
+                        <tr>
+                            <th class="border border-gray-300 px-4 py-2">S.No.</th>
+                            <th class="border border-gray-300 px-4 py-2">Subject</th>
+                            <th class="border border-gray-300 px-4 py-2">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">1</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/mathematics" class="text-blue-500 hover:underline">Mathematics</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">95</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">2</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/physics" class="text-blue-500 hover:underline">Physics</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">89</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">3</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/chemistry" class="text-blue-500 hover:underline">Chemistry</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">88</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">4</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/biology" class="text-blue-500 hover:underline">Biology</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">84</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">5</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/english" class="text-blue-500 hover:underline">English</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">81</td>
+    </tr>
+    <!-- GATE Subjects -->
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">6</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/engineering-mathematics" class="text-blue-500 hover:underline">Engineering Mathematics</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">90</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">7</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/digital-logic" class="text-blue-500 hover:underline">Digital Logic</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">85</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">8</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/computer-organization" class="text-blue-500 hover:underline">Computer Organization</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">88</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">9</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/programming-and-data-structures" class="text-blue-500 hover:underline">Programming and Data Structures</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">92</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">10</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/algorithms" class="text-blue-500 hover:underline">Algorithms</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">89</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">11</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/theory-of-computation" class="text-blue-500 hover:underline">Theory of Computation</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">91</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">12</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/compiler-design" class="text-blue-500 hover:underline">Compiler Design</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">87</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">13</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/operating-systems" class="text-blue-500 hover:underline">Operating Systems</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">86</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">14</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/databases" class="text-blue-500 hover:underline">Databases</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">92</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">15</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/computer-networks" class="text-blue-500 hover:underline">Computer Networks</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">94</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">16</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/software-engineering" class="text-blue-500 hover:underline">Software Engineering</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">82</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">17</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/machine-learning" class="text-blue-500 hover:underline">Machine Learning</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">85</td>
+    </tr>
+    <tr class="hover:bg-gray-100">
+        <td class="border border-gray-300 px-4 py-2 text-center">18</td>
+        <td class="border border-gray-300 px-4 py-2">
+            <a href="/artificial-intelligence" class="text-blue-500 hover:underline">Artificial Intelligence</a>
+        </td>
+        <td class="border border-gray-300 px-4 py-2 text-center">83</td>
+    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        
+            <!-- Progress Chart Section -->
+            <div class="w-2/5 h-72">
+                <p class="text-center font-bold mb-6 text-2xl">Progress Chart</p>
+                <canvas id="progressChart" class="p-5 w-[600px] h-[400px] rounded-lg"></canvas>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="footer" class="w-full bg-gray-700 mt-5 p-6"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const ctx = document.querySelector('canvas').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: 'Progress',
+                    data: [60, 75, 80, 90],
+                    borderColor: 'rgb(75, 192, 192)',
+                    fill: false,
+                    tension: 0.1,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true }
+                }
+            }
+        });
+    });
+    
+</script>
+<script>
+    const subjects = [
+        { id: 1, name: 'Mathematics', score: 95 },
+        { id: 2, name: 'Physics', score: 89 },
+        { id: 3, name: 'Chemistry', score: 88 },
+        { id: 4, name: 'Chemistry', score: 88 }
+        ];
+
+    const tbody = document.querySelector('tbody');
+    tbody.innerHTML = subjects.map(subject => `
+        <tr class="hover:bg-gray-100">
+            <td class="border px-4 py-2 text-center">${subject.id}</td>
+            <td class="border px-4 py-2">
+                <a href="/${subject.name.toLowerCase()}" class="text-blue-500 hover:underline">${subject.name}</a>
+            </td>
+            <td class="border px-4 py-2 text-center">${subject.score}</td>
+        </tr>
+    `).join('');
+
+    
+    </script>
+    <script>
+        const ctr = document.getElementById('progressChart').getContext('2d');
+    new Chart(ctr, {
+    type: 'pie',
+    data: {
+        labels: ['Math', 'Physics', 'Chemistry', 'Biology', 'English'],
+        datasets: [{
+            label: 'Performance',
+            data: [95, 89, 88, 84, 81],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+            padding: {
+                top: 20,
+                bottom: 20
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }
+});
+    </script>
+    
+
+</body>
+</html>
