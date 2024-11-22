@@ -36,7 +36,7 @@
                                 </ul>
                             </div>
                             <div class="row">
-                                <header>Postgratuate Exams</header>
+                                <header>Postgraduate Exams</header>
                                 <ul class="mega-links">
                                     <li><a href="#">GATE</a></li>
                                     <li><a href="#">PGCET</a></li>
@@ -81,7 +81,26 @@
                 <p>Previous Year Papers</p>
             </div>
             <div class="download">
-                <button class="daily1">Download PDF  <i class="fa fa-angle-double-right"></i></button>
+                <button class="daily1" id="downloadBtn">Download PDF  <i class="fa fa-angle-double-right"></i></button>
+                <div id="dropdown" style="display: none; margin-top: 10px;">
+                    <select id="pdfSelect">
+                        <option value="">Select Year</option>
+                        <option value="document_project.pdf">2023</option>
+                        <option value="document_project.pdf">2022</option>
+                        <option value="document_project.pdf">2021</option>
+                        <option value="document_project.pdf">2020</option>
+                        <option value="document_project.pdf">2019</option>
+                        <option value="document_project.pdf">2018</option>
+                        <option value="document_project.pdf">2017</option>
+                        <option value="document_project.pdf">2016</option>
+                        <option value="document_project.pdf">2015</option>
+                        <option value="document_project.pdf">2013</option>
+                        <option value="document_project.pdf">2012</option>
+                        <option value="document_project.pdf">2011</option>
+                        <option value="document_project.pdf">2010</option>
+                        <option value="document_project.pdf">2009</option>
+                    </select>
+                </div>
                 <br><br><br>
                 <button onClick="startTest('random')" class="daily1">Attempt Test  <i class="fa fa-angle-double-right"></i></button>
             </div>
@@ -245,7 +264,7 @@
                     <div class="badge">60019 Registrations</div>
                     <div class="card-header">
                         <img src="DSA.jpg" alt="SDE Icon">
-                        <h2>DSA</h2>
+                        <h2>Programming and Data structure</h2>
                     </div>
                     <div class="card-details">
                         <p><span>⏱ Time:</span> 50 Minutes</p>
@@ -263,7 +282,7 @@
                 <div class="card">
                     <div class="badge">60019 Registrations</div>
                     <div class="card-header">
-                        <img src="compileDesign.jpg" alt="SDE Icon">
+                        <img src="designOnline.jpeg" alt="SDE Icon">
                         <h2>Compile Design</h2>
                     </div>
                     <div class="card-details">
@@ -275,6 +294,44 @@
                         <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
                     </div>
                 </div>
+                
+
+                <div class="card">
+                    <div class="badge">60019 Registrations</div>
+                    <div class="card-header">
+                        <img src="GeneralApti.jpeg" alt="SDE Icon">
+                        <h2>General Aptitude</h2>
+                    </div>
+                    <div class="card-details">
+                        <p><span>⏱ Time:</span> 50 Minutes</p>
+                        <p><span>📋 Objective:</span> 5</p>
+                        <p><span>💻 Programming:</span> 2</p>
+                    </div>
+                    <div class="card-footer">
+                        <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="card">
+                    <div class="badge">60019 Registrations</div>
+                    <div class="card-header">
+                        <img src="computation.jpeg" alt="SDE Icon">
+                        <h2>Theory of computation</h2>
+                    </div>
+                    <div class="card-details">
+                        <p><span>⏱ Time:</span> 50 Minutes</p>
+                        <p><span>📋 Objective:</span> 5</p>
+                        <p><span>💻 Programming:</span> 2</p>
+                    </div>
+                    <div class="card-footer">
+                        <a onClick="startTest('random')" href="#" class="button">Attempt Now ➔</a>
+                    </div>
+                </div>
+
+                
             
                
             </div>
@@ -319,10 +376,10 @@
                 <div class="footer-section">
                     <h4>Follow Us</h4>
                     <div class="social-icons">
-                        <a href="#"><img src="icon-facebook.png" alt="Facebook"></a>
-                        <a href="#"><img src="icon-twitter.png" alt="Twitter"></a>
-                        <a href="#"><img src="icon-instagram.png" alt="Instagram"></a>
-                        <a href="#"><img src="icon-linkedin.png" alt="LinkedIn"></a>
+                        <a href="https://m.facebook.com/lovkumar.gupta.77/"><i class="fa fa-brands fa-facebook" style="font-size: 25px; color: white;"></i></a>
+                        <a href="https://x.com/?lang=en-in"><i class="fa fa-brands fa-twitter" style="font-size: 25px; color: white;"></i></a>
+                        <a href="https://www.instagram.com/its_anshika_0762/"><i class="fa fa-brands fa-instagram" style="font-size: 25px; color: white;"></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class="fa fa-brands fa-linkedin" style="font-size: 25px; color:white"></i></a>
                     </div>
                 </div>
             </div>
@@ -335,5 +392,36 @@
     </footer>
 
     <script src="script_home.js"></script>
+
+
+
+
+    <script>
+        // Show the dropdown when the button is clicked
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const dropdown = document.getElementById('dropdown');
+            dropdown.style.display = (dropdown.style.display === 'none') ? 'block' : 'none'; // Toggle visibility
+        });
+
+        // Detect selection change in dropdown and trigger PDF download
+        document.getElementById('pdfSelect').addEventListener('change', function() {
+            const selectedPdf = this.value;
+
+            if (selectedPdf) {
+                // Create a hidden link element to trigger the download
+                const link = document.createElement('a');
+                link.href = selectedPdf;  // PDF to download
+                link.download = selectedPdf;  // Set the download filename to the selected PDF name
+
+                // Trigger the download
+                link.click();
+            }
+        });
+    </script>
+
+
+    <!-- logout script -->
+
+    <script src="logout.js"></script>
 </body>
 </html>
