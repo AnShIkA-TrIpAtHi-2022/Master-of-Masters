@@ -223,7 +223,7 @@ function showAnswers() {
 
     answersHTML += `
         </div>
-        <button onclick="restartQuiz()">Restart Quiz</button>
+        <button onclick="restartQuiz()">Back to Home</button>
     `;
 
     quizContainer.innerHTML = answersHTML;
@@ -235,4 +235,5 @@ function restartQuiz() {
     answers = new Array(10).fill(null);
     score = 0;
     initializeQuiz();
+    window.location.href="../home.html";
 }
