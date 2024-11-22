@@ -13,9 +13,9 @@
 // }
 
 function startDailyChallenge() {
-    window.location.href = "quiz.html?questions=5&difficulty=random";
+    window.location.href = "./quizz/index.html";
 }
 
 function startTest(difficulty) {
-    window.location.href = `quiz.html?questions=20&difficulty=${difficulty}`;
+    window.location.href = "./quizz/index.html";
 }

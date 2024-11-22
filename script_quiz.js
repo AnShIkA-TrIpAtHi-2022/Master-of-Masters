@@ -9,8 +9,8 @@ let startTime, endTime;
 
 // Parse URL parameters
 const urlParams = new URLSearchParams(window.location.search);
-const numQuestions = parseInt(urlParams.get('questions')) || 5;  // Default to 5 if not specified
-const difficulty = urlParams.get('difficulty') || 'random';  // Default to 'random' if not specified
+const numQuestions = parseInt(urlParams.get('questions')) || 5;  
+const difficulty = urlParams.get('difficulty') || 'random';  
 
 // Load questions based on parameters
 async function loadQuestions() {
