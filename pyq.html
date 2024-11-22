@@ -1,9 +1,7 @@
 <button id="downloadBtn">Click me to see PDF options</button>
 
-    <!-- Dropdown menu for PDF download options -->
     <div id="dropdown" style="display: none; margin-top: 10px;">
         <select id="pdfSelect">
-            <!-- <option value="">Select a PDF</option> -->
             <option value="document_project.pdf">2023</option>
             <option value="document_project.pdf">2022</option>
             <option value="document_project.pdf">2021</option>
@@ -22,23 +20,17 @@
     </div>
 
     <script>
-        // Show the dropdown when the button is clicked
         document.getElementById('downloadBtn').addEventListener('click', function() {
             const dropdown = document.getElementById('dropdown');
             dropdown.style.display = (dropdown.style.display === 'none') ? 'block' : 'none'; // Toggle visibility
         });
-
-        // Detect selection change in dropdown and trigger PDF download
         document.getElementById('pdfSelect').addEventListener('change', function() {
             const selectedPdf = this.value;
 
             if (selectedPdf) {
-                // Create a hidden link element to trigger the download
                 const link = document.createElement('a');
-                link.href = selectedPdf;  // PDF to download
-                link.download = selectedPdf;  // Set the download filename to the selected PDF name
-
-                // Trigger the download
+                link.href = selectedPdf;  
+                link.download = selectedPdf; 
                 link.click();
             }
         });

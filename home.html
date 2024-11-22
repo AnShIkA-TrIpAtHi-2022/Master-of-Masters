@@ -11,7 +11,6 @@
     <section>
         <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
 
-  <!-- Chatbot popup -->
   <div class="chatbot-popup" id="chatbotPopup">
     <div class="chatbot-header">
       Chat with Us!
@@ -369,7 +368,6 @@
                     </p>
                 </div>
     
-                <!-- Quick Links Section -->
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -381,7 +379,6 @@
                     </ul>
                 </div>
     
-                <!-- Help Section -->
                 <div class="footer-section">
                     <h4>Help</h4>
                     <ul>
@@ -391,8 +388,6 @@
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
-    
-                <!-- Follow Us Section -->
                 <div class="footer-section">
                     <h4>Follow Us</h4>
                     <div class="social-icons">
@@ -404,7 +399,6 @@
                 </div>
             </div>
     
-            <!-- Footer Bottom Section -->
             <div class="footer-bottom">
                 <p>&copy; 2024 EduVerse. All rights reserved.</p>
             </div>
@@ -417,30 +411,24 @@
 
 
     <script>
-        // Show the dropdown when the button is clicked
         document.getElementById('downloadBtn').addEventListener('click', function() {
             const dropdown = document.getElementById('dropdown');
             dropdown.style.display = (dropdown.style.display === 'none') ? 'block' : 'none'; // Toggle visibility
         });
 
-        // Detect selection change in dropdown and trigger PDF download
         document.getElementById('pdfSelect').addEventListener('change', function() {
             const selectedPdf = this.value;
 
             if (selectedPdf) {
-                // Create a hidden link element to trigger the download
                 const link = document.createElement('a');
-                link.href = selectedPdf;  // PDF to download
-                link.download = selectedPdf;  // Set the download filename to the selected PDF name
+                link.href = selectedPdf;  
+                link.download = selectedPdf;  
 
-                // Trigger the download
                 link.click();
             }
         });
     </script>
 
-
-    <!-- logout script -->
 
     <script src="logout.js"></script>
 </body>

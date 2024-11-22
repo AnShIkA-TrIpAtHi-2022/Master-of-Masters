@@ -1,6 +1,6 @@
 
-const API_KEY = "3d9d230ab8mshb82d62d1db3fafap152239jsn2afb51b9ab40";
-const API_HOST = "cheapest-gpt-4-turbo-gpt-4-vision-chatgpt-openai-ai-api.p.rapidapi.com";
+const API_KEY = "api-key";
+const API_HOST = "api-key";
 
 
 let questions = new Array(10).fill(null);
@@ -64,7 +64,6 @@ Correct: [A/B/C/D]`;
     }
 }
 
-// Function to get different topics for each question
 function getTopicForIndex(index) {
     const topics = [
         "Process Management",
@@ -84,12 +83,10 @@ function getTopicForIndex(index) {
 function parseQuestion(content) {
     const lines = content.split('\n').map(line => line.trim()).filter(line => line);
     
-    // Extract question
     const questionLine = lines.find(line => line.startsWith('Question:'));
     if (!questionLine) throw new Error("Question format invalid");
     const questionText = questionLine.replace('Question:', '').trim();
     
-    // Extract options
     const options = [];
     const optionRegex = /^([A-D])\)\s*(.+)$/;
     const optionLines = lines.filter(line => optionRegex.test(line));
@@ -103,21 +100,20 @@ function parseQuestion(content) {
         }
     });
     
-    // Extract correct answer
     const correctLine = lines.find(line => line.toLowerCase().startsWith('correct:'));
     if (!correctLine) throw new Error("No correct answer specified");
     
     const correctLetter = correctLine.match(/[A-D]/)?.[0];
     if (!correctLetter) throw new Error("Invalid correct answer format");
     
-    const correctIndex = correctLetter.charCodeAt(0) - 65; // Convert A=0, B=1, etc.
+    const correctIndex = correctLetter.charCodeAt(0) - 65; 
     const correctAnswer = options[correctIndex];
 
     return {
         questionText,
         options,
         correctAnswer,
-        correctLetter // Keep track of the letter for verification
+        correctLetter 
     };
 }
 function renderQuestion(index) {
@@ -163,7 +159,6 @@ function prevQuestion() {
 function nextQuestion() {
     saveAnswer();
     currentQuestionIndex++;
-    // Generate next question if it doesn't exist
     if (!questions[currentQuestionIndex]) {
         generateQuestion(currentQuestionIndex);
     } else {

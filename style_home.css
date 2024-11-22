@@ -8,7 +8,6 @@
 }
 
 
-/* Chatbot button styles */
 .chatbot-button {
   position: fixed;
   bottom: 20px;
@@ -30,7 +29,6 @@
   transform: scale(1.1);
 }
 
-/* Chatbot popup styles */
 .chatbot-popup {
   position: fixed;
   bottom: 100px;
@@ -46,8 +44,6 @@
   z-index: 1000;
   animation: fadeIn 0.3s ease-in-out;
 }
-
-/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -111,8 +107,6 @@
   background-color: rgb(33,5,53,1);
   transform: scale(1.05);
 }
-
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .chatbot-popup {
     width: 95%;
@@ -274,7 +268,6 @@ nav .wrapper{
     box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
     transition: all 0.3s ease;
   }
-  /* custom scroll bar */
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -402,8 +395,6 @@ nav input{
     text-align: justify;
     height: 75vh;
 }
-
-/* Top left text */
 .top-left {
     position: absolute;
     top: 70px;
@@ -457,7 +448,6 @@ nav input{
     transform: scale(1.05);
 }
 
-/* PYQ's */
 .pdf{
     height: 100px;
     width: 350px;
@@ -572,7 +562,7 @@ box-shadow: 14px 11px 33px 0px rgba(0,0,0,0.75);
 .card-image {
   width: 100%;
   height: 250px;
-  object-fit: cover; /* Ensures consistent image display */
+  object-fit: cover; 
   border-bottom: 2px solid #ddd;
 }
 
@@ -653,7 +643,6 @@ h4 b{
   font-weight: bold;
 }
 
-/* Card Header */
 .card-header img {
   width: 130px;
   margin-top: 20px;
@@ -665,7 +654,6 @@ h4 b{
   color: #333;
 }
 
-/* Card Details */
 .card-details {
   margin: 10px 0;
   font-size: 14px;
@@ -680,7 +668,6 @@ h4 b{
   font-weight: bold;
 }
 
-/* Card Footer */
 .card-footer {
   margin-bottom: 20px;
 }
@@ -699,7 +686,6 @@ h4 b{
   background: #0056b3;
 }
 
-/* Differentiation by Class */
 .sde-card {
   border: 2px solid #007bff;
 }
@@ -729,12 +715,6 @@ h4 b{
   animation: autoshow2 both;
   animation-timeline: view(70% 0%);
 }
-/* Individual Footer Section */
-/* footerrrrrr*/
-
-
-
-/* Footer Container */
 .footer {
   background-color: rgb(35, 1, 35);
   color: #ffffff;
@@ -748,7 +728,6 @@ h4 b{
   margin: 0 auto;
 }
 
-/* Footer Sections Layout */
 .footer-sections {
   display: flex;
   flex-wrap: wrap;
@@ -757,7 +736,6 @@ h4 b{
   margin-bottom: 30px;
 }
 
-/* Individual Footer Section */
 .footer-section {
   flex: 1;
   min-width: 220px;
@@ -794,8 +772,6 @@ h4 b{
 .footer-section ul li a:hover {
   color: rgb(162, 40, 121);
 }
-
-/* Social Media Icons */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -811,7 +787,6 @@ h4 b{
   transform: scale(1.2);
 }
 
-/* Footer Bottom */
 .footer-bottom {
   text-align: center;
   border-top: 1px solid #333;
